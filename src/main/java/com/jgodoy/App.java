@@ -9,7 +9,7 @@ import java.io.Reader;
 
 public class App {
     public static void main(String[] args) throws Exception {
-       
+			String testeCommit = "lol";
 		try ( 
 
 			//veiculo passageiro
@@ -29,7 +29,7 @@ public class App {
 			for (CSVRecord csvRecord : csvParser1) { 
 
 				if (csvRecord.getRecordNumber() >1){//para não pegar o "cabeçalho"
-					// Accessing Values by Column Index 
+					
 					String placa = csvRecord.get(0); 
 					String marca = csvRecord.get(1);
 					String modelo = csvRecord.get(2);
@@ -50,8 +50,8 @@ public class App {
 					System.out.println("Preço  : "  + v.getValor()); 
 					System.out.println("---------------\n\n"); 
 
-				}//fecha if		
-			}//fecha for
+				}		
+			}
 
 			System.out.println("Veiculos de Passeio:");
 			for (CSVRecord csvRecord : csvParser2) { 
@@ -78,8 +78,8 @@ public class App {
 					System.out.println("Preco  : "  + v.getValor()); 
 					System.out.println("---------------\n\n"); 
 
-				}//fecha if		
-			}//fecha for
+				}		
+			}
 
 			System.out.println("Veiculos Utilitários:");
 			for (CSVRecord csvRecord : csvParser3) { 
@@ -108,8 +108,8 @@ public class App {
 					System.out.println("Preco  : "  + v.getValor()); 
 					System.out.println("---------------\n\n"); 
 
-				}//fecha if		
-			}//fecha for
+				}	
+			}
 
 		}//fecha try
 		catch(Exception e){
